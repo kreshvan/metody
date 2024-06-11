@@ -7,7 +7,7 @@ public class Main {
             System.out.println(number + " "+"год-не високосный.");
         }
     }
-    //заданиеее 2
+    //заданиеее 2.
     public static void suggestAppVersion (int phones, int year) {
         if (phones == 1 && year <= 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
