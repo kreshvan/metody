@@ -20,28 +20,39 @@ public class Main {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         }
     }
-    //задание 3
-    public static void distanceTime(int km) {
+// задание 3
+    public static int distanceTime(int km) {
+        int day = 0;
         if (km <= 20) {
-            System.out.println("Потребуется дней:1" + " " + "срок доставки.");
+            day = day + 1;
+            return day;
         } else if (km > 20 && km < 60) {
-            System.out.println("Потребуется дней:2" + " " + "срок доставки.");
+            day = day + 2;
+            return day;
         } else if (km >= 60 && km < 100) {
-            System.out.println("Потребуется дней:3" + " " + "срок доставки.");
-        } else if (km >= 100) {
-            System.out.println("доставки нет.");
+            day = day + 3;
+            return day;
+        } else {
+            return day;
         }
     }
     public static void main(String[] args) {
-        int year = 40001;
-        checkLeapYear(year);
-        int deliveryDistance = 50;
-        distanceTime(deliveryDistance);
-        int namePhone = 0;
-        int clientDeviceYear = 2222;
-        suggestAppVersion (namePhone,clientDeviceYear);
+        int deliveryDistance = 60;
+        int days = distanceTime(deliveryDistance);//применяем метод "distanceTime" с его свойствами к заданному киллометражу
+        if (days > 0) {
+            System.out.println("Потребуется дней: " + days + " срок доставки.");
+        } else {
+            System.out.println("Доставки нет.");
+        }
     }
 }
+
+
+
+
+
+
+
 
 
 
